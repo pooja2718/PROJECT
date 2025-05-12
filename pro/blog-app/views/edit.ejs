@@ -1,0 +1,8 @@
+<%- include('partials/header') %>
+<h2>Edit Blog</h2>
+<form action='/blogs/<%= blog._id %>?_method=PUT' method='POST'>
+  <input type='text' name='title' value='<%= blog.title %>' required>
+  <input type='url' name='imageUrl' value='<%= blog.imageUrl %>' required>
+  <textarea name='content' required><%= blog.content %></textarea>
+  <button type='submit'>Update</button>
+</form>
